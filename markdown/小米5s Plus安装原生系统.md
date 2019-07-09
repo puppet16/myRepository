@@ -66,10 +66,14 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 ## 第五步： 安装ROM包
 
 1. 将下好的ROM包放到手机根目录下
-
 2. 打开手机的Recovery界面，点击安装，选择ROM包。
-
 3. 手机卡在开机界面时，先进入Recovery界面再格式化data即可。
+
+## 第六步：获取Root权限
+
+1. Lineageos的Root包地址：[https://www.lineageosrom.com/2017/01/download-supersuzp-and-su-removalzip.html](https://www.lineageosrom.com/2017/01/download-supersuzp-and-su-removalzip.html)
+2. 下载好对就CPU及系统版本的Root包后，将压缩包放到手机根目录下
+3. 打开手机的Recovery界面，选择安装Root包。
 
 ## 遇到问题
 
@@ -89,4 +93,4 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 
       参考网址：[https://www.lineageos.org.cn/thread-118-1-1.html](https://www.lineageos.org.cn/thread-118-1-1.html)
 
-      
+   2. ***一定要科学上网，否则网速会让你绝望***
