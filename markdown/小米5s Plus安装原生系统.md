@@ -72,8 +72,12 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 ## 第六步：获取Root权限
 
 1. Lineageos的Root包地址：[https://www.lineageosrom.com/2017/01/download-supersuzp-and-su-removalzip.html](https://www.lineageosrom.com/2017/01/download-supersuzp-and-su-removalzip.html)
+
 2. 下载好对就CPU及系统版本的Root包后，将压缩包放到手机根目录下
+
 3. 打开手机的Recovery界面，选择安装Root包。
+
+   参考网址：[https://tieba.baidu.com/p/4961319803?share=9105&fr=share&red_tag=2572190043](https://tieba.baidu.com/p/4961319803?share=9105&fr=share&red_tag=2572190043)
 
 ## 遇到问题
 
