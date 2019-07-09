@@ -50,7 +50,7 @@
 
 4. 安装完成后，点重新启动。
 
-   ### 方法二、 MIUI系统中获取
+### 方法二、 MIUI系统中获取
 
    1. 安全中心-->应用管理-->权限-->Root权限管理
    2. 点击获取root权限。
@@ -71,7 +71,7 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 
 3. 手机卡在开机界面时，先进入Recovery界面再格式化data即可。
 
-   ## 遇到问题
+## 遇到问题
 
    1. WIFI显示叉号，提示无法联网，但是可以上网
 
