@@ -71,13 +71,56 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 
 ## 第六步：获取Root权限
 
-1. Lineageos的Root包地址：[https://download.lineageos.org/extras](https://download.lineageos.org/extras)
+### 方法一、使用Lineageos自带的补丁包
+
+1. Lineageos的Root补丁包地址：[https://download.lineageos.org/extras](https://download.lineageos.org/extras)
 
 2. 下载好对应CPU位数及系统版本的Root包后，将压缩包放到手机根目录下
 
 3. 打开手机的Recovery界面，选择安装Root包。
 
    参考网址：[https://tieba.baidu.com/p/4961319803?share=9105&fr=share&red_tag=2572190043](https://tieba.baidu.com/p/4961319803?share=9105&fr=share&red_tag=2572190043)
+   
+   结果：**失败**
+
+### 方法二、使用SuperSu
+
+1. SuperSu的卡刷包地址：[https://www.lineageosrom.com/2018/09/lineage-os-16-root-android-pie-90-super.html](https://www.lineageosrom.com/2018/09/lineage-os-16-root-android-pie-90-super.html)
+
+2. 下载好对应CPU位数及系统版本的Root包后，将压缩包放到手机根目录下
+
+3. 打开手机的Recovery界面，选择安装Root包。
+
+4. 下载SuperSu的app应用并安装。
+
+   结果：**失败**
+
+## 方法三、使用Magisk
+
+1. magisk网址：[https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445)
+
+2. 两种方法：
+
+   * 支持 [TWRP](https://twrp.me/Devices/) ，直接进入Recovery界面，安装Magisk包。
+
+   * 不支持TWRP，使用以下方法：
+
+     1. 下载一个magisk manager安装包，并安装。
+     2. 从你的刷机包中提取当前固件的 **boot.img** 文件，将它传入到安装了 Magisk Manager 的手机中
+     3. 进入 Magisk Manager —— 安装（install）—— install —— 修补 boot 镜像文件
+     4. 然后选择传入的 boot.img 文件进行生成，并将生成后的 Patchedboot.img （姑且这么命名） 传输到电脑上。
+     5. 随后我们使用 Magisk 应用对 boot.img 进行重新打包：
+     6. 打开命令行窗口
+     7. 执行 `adb reboot bootloader` 进入 Bootloader 界面
+     8. 执行 `fastboot boot Patchedboot.img` 来加载生成后的 boot 分区文件获取**临时 root**
+
+     10. 此时进入系统，你会发现你已经成功安装了 Magisk（如果显示没有安装则为获取失败，请检查操作过程重新尝试），但这还不够，我们还得进入 Magisk Manager，选择安装（install）——install——Direct Install（直接安装）才能将临时 root 转换为永久 root。
+
+***注意：安装Magisk之前确保没有安装过Super su，否则无法安装成功。若是之前安装过了，需要格式化data并重新刷系统，才能安装成功。***
+
+参考网址：[https://sspai.com/post/53043](https://sspai.com/post/53043)
+
+结果：**成功**
 
 ## 遇到问题
 
@@ -85,15 +128,15 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 
       解决方法：
 
-      Android 7.0之前版本的系统，执行以下命令：
+      * Android 7.0之前版本的系统，执行以下命令：
 
-      `adb shell "settings put global captive_portal_server captive.lineageos.org.cn"`
+        `adb shell "settings put global captive_portal_server captive.lineageos.org.cn"`
 
-      Android 7.0之后的版本需要执行下面的两条命令：
+      * **Android 7.0之后**的版本需要执行下面的两条命令：
 
-      `adb shell "settings put global captive_portal_http_url http://captive.lineageos.org.cn/generate_204";`
+        `adb shell "settings put global captive_portal_http_url http://captive.lineageos.org.cn/generate_204";`
 
-      `adb shell "settings put global captive_portal_https_url https://captive.lineageos.org.cn/generate_204"`
+        `adb shell "settings put global captive_portal_https_url https://captive.lineageos.org.cn/generate_204"`
 
       参考网址：[https://www.lineageos.org.cn/thread-118-1-1.html](https://www.lineageos.org.cn/thread-118-1-1.html)
 
