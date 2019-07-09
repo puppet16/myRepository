@@ -79,7 +79,7 @@ Lineageos：[https://download.lineageos.org/](https://download.lineageos.org/)
 
       Android 7.0之前版本的系统，执行以下命令：
 
-      `adb shell "settings put global captive_portal_server captive.lineageos.org.cn"
+      `adb shell "settings put global captive_portal_server captive.lineageos.org.cn"`
 
       Android 7.0之后的版本需要执行下面的两条命令：
 
